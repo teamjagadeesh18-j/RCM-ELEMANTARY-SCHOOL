@@ -55,12 +55,14 @@ export function SpatialHeader() {
         {/* Desktop CTA & Mobile Menu Toggle Button */}
         <div className="flex items-center gap-2 shrink-0">
           <div className="hidden sm:block">
-            <OrbitBorderButton
+            <StarfieldButton
               label="Apply Now"
               link="/apply"
               padding="7px 16px 7px 16px"
+              font={{ fontSize: 14, fontWeight: 700 }}
               colors={{ fill: "#0b3558", textColor: "#ffffff" }}
-              stroke={{ color: "#7a8aff", size: 30, speed: 50 }}
+              stroke={{ color: "#8169ff", count: 1, size: 70, speed: 50 }}
+              pixel={{ color: "#8169ff", size: 3, density: 50, brightness: 100 }}
             />
           </div>
 
