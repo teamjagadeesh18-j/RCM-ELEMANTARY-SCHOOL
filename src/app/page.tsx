@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import SchoolMessageSection from "@/components/ui/school-message-section";
 
@@ -123,9 +124,9 @@ export default function Home() {
               text="Gentle Beginnings That Shape a Lifetime of Learning"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0b3558] leading-tight font-heading"
             />
-            <p className="text-lg sm:text-xl text-[#476788] max-w-xl font-body leading-relaxed">
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-lg sm:text-xl text-[#476788] max-w-xl font-body leading-relaxed">
               Nurturing early curiosity, foundational literacy, and arithmetic clarity in a safe, warm, and encouraging elementary school environment.
-            </p>
+            </TextEffect>
             <div className="pt-2 flex flex-wrap items-center gap-4 font-body">
               <StarfieldButton
                 label="Apply Now"

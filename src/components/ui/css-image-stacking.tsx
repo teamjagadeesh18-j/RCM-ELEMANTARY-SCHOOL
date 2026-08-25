@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 import React from "react";
 
 export default function CssImageStacking() {
@@ -17,12 +18,12 @@ export default function CssImageStacking() {
         <span className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-100 text-teal-800 border border-teal-300 font-body">
           PLAYFUL FLOATING CLOUD
         </span>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-[#115e59] mt-4 font-heading leading-tight">
+        <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl sm:text-5xl font-extrabold text-[#115e59] mt-4 font-heading leading-tight">
           Little Steps at R.C.M Elementary
-        </h2>
-        <p className="text-teal-800/80 text-base sm:text-lg mt-3 font-body">
+        </TextEffect>
+        <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-teal-800/80 text-base sm:text-lg mt-3 font-body">
           Playful foundational learning moments captured across our primary campus.
-        </p>
+        </TextEffect>
       </div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -41,9 +42,9 @@ export default function CssImageStacking() {
                 {item.category}
               </span>
             </div>
-            <h3 className="mt-3 text-base font-bold text-[#115e59] font-heading text-center">
+            <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="mt-3 text-base font-bold text-[#115e59] font-heading text-center">
               {item.title}
-            </h3>
+            </TextEffect>
           </div>
         ))}
       </div>
