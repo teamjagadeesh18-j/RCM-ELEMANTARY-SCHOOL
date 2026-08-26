@@ -224,7 +224,7 @@ export function FocusReveal({
               return (
                 <motion.span
                   key={`${char}-${index}`}
-                  className="inline-block will-change-[transform,opacity,filter]"
+                  className="inline-block"
                   initial={hidden}
                   animate={visible}
                   transition={{

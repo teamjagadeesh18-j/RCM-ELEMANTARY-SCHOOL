@@ -181,7 +181,6 @@ export function TextEffect({
             key={index}
             variants={itemVariants}
             className={'inline-block ' + segmentWrapperClassName}
-            style={{ willChange: 'transform, opacity, filter' }}
           >
             {segment}
           </motion.span>
