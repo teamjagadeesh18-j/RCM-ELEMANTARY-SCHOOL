@@ -177,6 +177,9 @@ export function FocusReveal({
     margin: 0,
     display: "block",
     width: "100%",
+    maxWidth: "100%",
+    wordBreak: "break-word",
+    overflowWrap: "break-word",
     ...(color ? { color } : null),
     ...(font ?? null),
   };
@@ -197,16 +200,22 @@ export function FocusReveal({
       };
 
   return (
-    <MotionTag aria-label={text} className={className} style={rootStyle}>
+    <MotionTag aria-label={text} className={`${className} max-w-full break-words`} style={rootStyle}>
       {words.map((word, wordIndex) => {
         const isWhitespace = word.chars.every((c) => /\s/.test(c));
+
+        if (isWhitespace) {
+          return (
+            <span key={`space-${wordIndex}`} className="inline">
+              {" "}
+            </span>
+          );
+        }
 
         return (
           <span
             key={`word-${wordIndex}`}
-            className={
-              isWhitespace ? undefined : "inline-block whitespace-nowrap mr-[0.25em]"
-            }
+            className="inline-block max-w-full mr-[0.25em] last:mr-0 align-baseline"
             aria-hidden="true"
           >
             {word.chars.map((char, charOffset) => {
@@ -226,7 +235,7 @@ export function FocusReveal({
                   }}
                   onAnimationComplete={() => handleCharComplete(index)}
                 >
-                  {char === " " ? "\u00A0" : char}
+                  {char}
                 </motion.span>
               );
             })}

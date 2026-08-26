@@ -114,20 +114,20 @@ export default function Home() {
       
       {/* School Specific Animated Hero Section with 3D Neural Brain Visual */}
       <AuroraBackground showRadialGradient={true}>
-        <div className="relative z-10 max-w-[1250px] mx-auto px-6 py-12 lg:py-16 grid lg:grid-cols-12 gap-8 items-center w-full">
+        <div className="relative z-10 max-w-[1250px] mx-auto px-4 sm:px-6 py-6 sm:py-12 lg:py-16 grid lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full">
           {/* Left Column Content */}
-          <div className="lg:col-span-7 space-y-6 text-left font-heading">
-            <span className="inline-block px-4 py-1.5 rounded-[8px] bg-[#e6f0ff] text-[#006bff] text-xs font-semibold uppercase tracking-wider font-body">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left font-heading w-full max-w-full overflow-hidden">
+            <span className="inline-block px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-[8px] bg-[#e6f0ff] text-[#006bff] text-[11px] sm:text-xs font-semibold uppercase tracking-wider font-body max-w-full truncate">
               📍 Vivekananda Nagar, Avadi • Rating 4.6★
             </span>
-      <FocusReveal
+            <FocusReveal
               text="Gentle Beginnings That Shape a Lifetime of Learning"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0b3558] leading-tight font-heading"
+              className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0b3558] leading-tight font-heading max-w-full break-words"
             />
-            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-lg sm:text-xl text-[#476788] max-w-xl font-body leading-relaxed">
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base sm:text-xl text-[#476788] max-w-xl font-body leading-relaxed break-words">
               Nurturing early curiosity, foundational literacy, and arithmetic clarity in a safe, warm, and encouraging elementary school environment.
             </TextEffect>
-            <div className="pt-2 flex flex-wrap items-center gap-4 font-body">
+            <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 font-body w-full sm:w-auto">
               <StarfieldButton
                 label="Apply Now"
                 link="#connect"
@@ -135,14 +135,14 @@ export default function Home() {
                 stroke={{ color: "#4795ff", count: 1, size: 96, speed: 50 }}
                 pixel={{ color: "#4795ff", size: 4, density: 50, brightness: 100 }}
               />
-              <a href="#about" className="px-6 py-3.5 rounded-[8px] border border-[#d4e0ed] text-[#0b3558] bg-white text-base font-medium hover:bg-slate-50 transition-all">
+              <a href="#about" className="px-6 py-3.5 rounded-[8px] border border-[#d4e0ed] text-[#0b3558] bg-white text-base font-medium hover:bg-slate-50 transition-all text-center">
                 Explore Curriculum
               </a>
             </div>
           </div>
 
           {/* Right Column (Top Right Position): 3D Brain & Neural Particle Visual */}
-          <div className="lg:col-span-5 relative w-full flex items-center justify-center min-h-[420px]">
+          <div className="lg:col-span-5 relative w-full flex items-center justify-center min-h-[340px] xs:min-h-[380px] sm:min-h-[420px] my-2 sm:my-0">
             <NeuralDiagram />
           </div>
         </div>
