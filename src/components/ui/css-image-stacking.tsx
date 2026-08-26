@@ -4,12 +4,12 @@ import React from "react";
 
 export default function CssImageStacking() {
   const bubbles = [
-    { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&auto=format&fit=crop", title: "Joyful Primary Reading", category: "FOUNDATION" },
-    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&auto=format&fit=crop", title: "Playground Outdoor Fun", category: "SPORTS" },
-    { src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&auto=format&fit=crop", title: "Stage Rhymes & Music", category: "CULTURAL" },
-    { src: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200&auto=format&fit=crop", title: "Activity Science Lab", category: "PRACTICALS" },
-    { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&auto=format&fit=crop", title: "Picture Story Corner", category: "LIBRARY" },
-    { src: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&auto=format&fit=crop", title: "Green School Yard", category: "INFRASTRUCTURE" },
+    { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=480&q=75&auto=format&fit=crop", title: "Joyful Primary Reading", category: "FOUNDATION" },
+    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=480&q=75&auto=format&fit=crop", title: "Playground Outdoor Fun", category: "SPORTS" },
+    { src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=480&q=75&auto=format&fit=crop", title: "Stage Rhymes & Music", category: "CULTURAL" },
+    { src: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=480&q=75&auto=format&fit=crop", title: "Activity Science Lab", category: "PRACTICALS" },
+    { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=480&q=75&auto=format&fit=crop", title: "Picture Story Corner", category: "LIBRARY" },
+    { src: "https://images.unsplash.com/photo-1562774053-701939374585?w=480&q=75&auto=format&fit=crop", title: "Green School Yard", category: "INFRASTRUCTURE" },
   ];
 
   return (
@@ -36,6 +36,8 @@ export default function CssImageStacking() {
               <img
                 src={item.src}
                 alt={item.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3.5 py-1 rounded-full text-[10px] font-bold text-[#115e59] uppercase tracking-widest font-body shadow-sm">

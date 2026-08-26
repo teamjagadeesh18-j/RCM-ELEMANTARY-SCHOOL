@@ -61,13 +61,11 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body bg-[#F8FAFC] text-[#475569] antialiased min-h-screen">
-        <SmoothScrollProvider>
         <LenisSmoothScroll>
           {children}
           <WhatsAppFloat />
         </LenisSmoothScroll>
-              </SmoothScrollProvider>
-</body>
+      </body>
     </html>
   );
 }

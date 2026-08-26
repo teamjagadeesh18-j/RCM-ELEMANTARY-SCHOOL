@@ -13,14 +13,14 @@ export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const photos = [
-    { url: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80", category: "Academics", title: "Interactive Smart Classroom" },
-    { url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80", category: "Sports", title: "Annual Sports Meet & Athletics" },
-    { url: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80", category: "Events", title: "Science & Innovation Exhibition" },
-    { url: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80", category: "Campus", title: "Central Library Reading Session" },
-    { url: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80", category: "Kindergarten", title: "Kindergarten Play & Activity Room" },
-    { url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80", category: "Academics", title: "Computer Lab Practical Class" },
-    { url: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80", category: "Academics", title: "Chemistry Science Practical" },
-    { url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80", category: "Events", title: "Annual Cultural Day Performances" },
+    { url: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=480&q=75", category: "Academics", title: "Interactive Smart Classroom" },
+    { url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=480&q=75", category: "Sports", title: "Annual Sports Meet & Athletics" },
+    { url: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=480&q=75", category: "Events", title: "Science & Innovation Exhibition" },
+    { url: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=480&q=75", category: "Campus", title: "Central Library Reading Session" },
+    { url: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=480&q=75", category: "Kindergarten", title: "Kindergarten Play & Activity Room" },
+    { url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=480&q=75", category: "Academics", title: "Computer Lab Practical Class" },
+    { url: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=480&q=75", category: "Academics", title: "Chemistry Science Practical" },
+    { url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=480&q=75", category: "Events", title: "Annual Cultural Day Performances" },
   ];
 
   const categories = ['All', 'Academics', 'Sports', 'Events', 'Campus', 'Kindergarten'];
@@ -87,6 +87,8 @@ export default function GalleryPage() {
               <img 
                 src={photo.url} 
                 alt={photo.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">

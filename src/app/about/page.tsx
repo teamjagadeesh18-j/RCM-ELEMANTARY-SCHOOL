@@ -77,8 +77,10 @@ export default function AboutPage() {
 
           <div className="rounded-2xl border border-[#e2e8f0] overflow-hidden shadow-lg p-2 bg-white">
             <img 
-              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=500&q=75" 
               alt="R.C.M Matriculation Elementary School Campus"
+              loading="lazy"
+              decoding="async"
               className="w-full h-[380px] object-cover rounded-xl"
             />
           </div>

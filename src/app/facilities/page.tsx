@@ -14,37 +14,37 @@ export default function FacilitiesPage() {
       title: "Academic Book Bank & Library",
       desc: "Comprehensive collection of prescribed state board textbooks, reference guides, question banks, and storybooks.",
       icon: BookOpen,
-      img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=480&q=75"
     },
     {
       title: "Science & Research Laboratories",
       desc: "State-of-the-art Physics, Chemistry, and Biology apparatus equipped for safe, hands-on student experiments.",
       icon: FlaskConical,
-      img: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=480&q=75"
     },
     {
       title: "Computer Center & IT Lab",
       desc: "Modern computer lab with high-speed internet, individual workstations, and software training for digital literacy.",
       icon: Monitor,
-      img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=480&q=75"
     },
     {
       title: "Recreation Playground & Sports Arena",
       desc: "Spacious outdoor grounds for cricket, football, volleyball, athletics, badminton, and physical education sessions.",
       icon: Shield,
-      img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=480&q=75"
     },
     {
       title: "Medical Room & First Aid Support",
       desc: "Dedicated medical rest area with essential first aid supplies, trained staff supervision, and doctor-on-call connectivity.",
       icon: HeartPulse,
-      img: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=480&q=75"
     },
     {
       title: "Interactive Smart Classrooms",
       desc: "Audio-visual learning aids, digital projectors, and clear visual demonstrations to make lessons engaging.",
       icon: Sparkles,
-      img: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=480&q=75"
     }
   ];
 
@@ -82,7 +82,7 @@ export default function FacilitiesPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {facilityList.map((f, i) => (
             <div key={i} className="bg-white rounded-2xl border border-[#e2e8f0] overflow-hidden shadow-sm hover:shadow-md transition-all">
-              <img src={f.img} alt={f.title} className="w-full h-48 object-cover" />
+              <img src={f.img} alt={f.title} loading="lazy" decoding="async" className="w-full h-48 object-cover" />
               <div className="p-6 space-y-3">
                 <div className="w-10 h-10 rounded-xl bg-[#eeeffc] text-[#006bff] flex items-center justify-center">
                   <f.icon className="w-5 h-5" />

@@ -245,8 +245,10 @@ export function SpatialFeatureSection() {
 
           <div className="rounded-[24px] bg-[#ffffff] border border-[#d4e0ed] overflow-hidden shadow-lg p-3">
             <img 
-              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=500&q=75" 
               alt="Classroom Learning at R.C.M Matriculation Elementary School" 
+              loading="lazy"
+              decoding="async"
               className="w-full h-[360px] object-cover rounded-[24px]"
             />
           </div>
