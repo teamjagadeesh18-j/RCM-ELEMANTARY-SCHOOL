@@ -1,5 +1,6 @@
 "use client";
 import { TextEffect } from '@/components/core/text-effect';
+import { GraduationCap, BookOpen, Pencil, Globe, Bus, Palette, Sparkles } from "lucide-react";
 
 import SchoolMessageSection from "@/components/ui/school-message-section";
 
@@ -112,12 +113,50 @@ export default function Home() {
       {/* Upper-Middle Hero Velocity Ribbon */}
       
       
-      {/* School Specific Animated Hero Section with 3D Neural Brain Visual */}
+      {/* School Specific Animated Hero Section with Campus Background & Floating Elementary Badges */}
       <AuroraBackground showRadialGradient={true}>
+        {/* Background School Campus Photo Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none opacity-25 transition-opacity duration-500"
+          style={{ backgroundImage: `url('/campus-hero-bg.jpg')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f8f9fb]/90 via-[#f8f9fb]/75 to-[#f8f9fb]/95 backdrop-blur-[1px] pointer-events-none" />
+
+        {/* Floating Elementary School Icon Tiles (Matching Floating Icon Style) */}
+        {/* 1. Top Left Tile: Graduation Cap */}
+        <div className="absolute top-12 left-4 sm:left-14 z-20 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/95 border border-[#e2e8f0] shadow-md flex items-center justify-center text-[#006bff] hover:shadow-lg transition-all animate-bounce [animation-duration:4s]">
+          <GraduationCap className="w-5 h-5 sm:w-7 sm:h-7" />
+        </div>
+
+        {/* 2. Top Right Tile: Book Open */}
+        <div className="absolute top-16 right-4 sm:right-16 z-20 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/95 border border-[#e2e8f0] shadow-md flex items-center justify-center text-[#006bff] hover:shadow-lg transition-all animate-pulse [animation-duration:3.5s]">
+          <BookOpen className="w-5 h-5 sm:w-7 sm:h-7" />
+        </div>
+
+        {/* 3. Center Right Tile: Globe */}
+        <div className="absolute top-1/3 right-3 sm:right-10 z-20 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/95 border border-[#e2e8f0] shadow-md flex items-center justify-center text-[#006bff] hover:shadow-lg transition-all animate-bounce [animation-duration:5s]">
+          <Globe className="w-5 h-5 sm:w-7 sm:h-7" />
+        </div>
+
+        {/* 4. Bottom Left Tile: Pencil */}
+        <div className="absolute bottom-16 left-6 sm:left-20 z-20 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/95 border border-[#e2e8f0] shadow-md flex items-center justify-center text-[#006bff] hover:shadow-lg transition-all animate-pulse [animation-duration:4s]">
+          <Pencil className="w-5 h-5 sm:w-7 sm:h-7" />
+        </div>
+
+        {/* 5. Bottom Right Tile: School Bus */}
+        <div className="absolute bottom-14 right-6 sm:right-24 z-20 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/95 border border-[#e2e8f0] shadow-md flex items-center justify-center text-[#006bff] hover:shadow-lg transition-all animate-bounce [animation-duration:3.8s]">
+          <Bus className="w-5 h-5 sm:w-7 sm:h-7" />
+        </div>
+
+        {/* 6. Mid Left Tile: Creative Palette */}
+        <div className="hidden sm:flex absolute top-1/2 left-6 z-20 p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/95 border border-[#e2e8f0] shadow-md items-center justify-center text-[#006bff] hover:shadow-lg transition-all animate-pulse [animation-duration:4.5s]">
+          <Palette className="w-5 h-5 sm:w-7 sm:h-7" />
+        </div>
+
         <div className="relative z-10 max-w-[1250px] mx-auto px-4 sm:px-6 py-6 sm:py-12 lg:py-16 grid lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full">
           {/* Left Column Content */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left font-heading w-full max-w-full overflow-hidden">
-            <span className="inline-block px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-[8px] bg-[#e6f0ff] text-[#006bff] text-[11px] sm:text-xs font-semibold uppercase tracking-wider font-body max-w-full truncate">
+            <span className="inline-block px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-[8px] bg-[#e6f0ff] text-[#006bff] text-[11px] sm:text-xs font-semibold uppercase tracking-wider font-body max-w-full truncate shadow-xs">
               📍 Vivekananda Nagar, Avadi • Rating 4.6★
             </span>
             <FocusReveal
@@ -127,17 +166,42 @@ export default function Home() {
             <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base sm:text-xl text-[#476788] max-w-xl font-body leading-relaxed break-words">
               Nurturing early curiosity, foundational literacy, and arithmetic clarity in a safe, warm, and encouraging elementary school environment.
             </TextEffect>
-            <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 font-body w-full sm:w-auto">
-              <StarfieldButton
-                label="Apply Now"
-                link="#connect"
-                colors={{ fill: "#006bff", textColor: "#ffffff" }}
-                stroke={{ color: "#4795ff", count: 1, size: 96, speed: 50 }}
-                pixel={{ color: "#4795ff", size: 4, density: 50, brightness: 100 }}
-              />
-              <a href="#about" className="px-6 py-3.5 rounded-[8px] border border-[#d4e0ed] text-[#0b3558] bg-white text-base font-medium hover:bg-slate-50 transition-all text-center">
-                Explore Curriculum
+            
+            {/* Hero Action Buttons */}
+            <div className="pt-3 flex flex-wrap items-center gap-3 sm:gap-4 font-body">
+              <a
+                href="#connect"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-b from-[#006bff] to-[#0052cc] text-white text-sm font-bold shadow-[0_8px_20px_-4px_rgba(0,107,255,0.4),inset_0_1px_0_rgba(255,255,255,0.3)] hover:shadow-[0_12px_25px_-4px_rgba(0,107,255,0.5)] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 cursor-pointer"
+              >
+                <span>Apply Now</span>
+                <span className="text-sm font-bold">→</span>
               </a>
+              <a
+                href="#about"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white border border-[#d4e0ed] text-[#0b3558] text-sm font-bold shadow-xs hover:shadow-md hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98] transition-all duration-300 cursor-pointer"
+              >
+                <span>Explore Curriculum</span>
+              </a>
+            </div>
+
+            {/* Mobile Elementary Learning Badges Strip (Visible on Mobile) */}
+            <div className="flex sm:hidden flex-wrap items-center gap-2 pt-2 font-body">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/95 border border-blue-200/80 shadow-xs text-xs font-bold text-[#0b3558]">
+                <span>🔤</span>
+                <span>Phonics & Reading</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/95 border border-amber-200/80 shadow-xs text-xs font-bold text-[#0b3558]">
+                <span>🎨</span>
+                <span>Creative Arts</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/95 border border-emerald-200/80 shadow-xs text-xs font-bold text-[#0b3558]">
+                <span>🧩</span>
+                <span>Activity Play</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/95 border border-purple-200/80 shadow-xs text-xs font-bold text-[#0b3558]">
+                <span>⭐</span>
+                <span>Safe Campus</span>
+              </div>
             </div>
           </div>
 
